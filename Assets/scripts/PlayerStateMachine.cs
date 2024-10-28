@@ -61,10 +61,14 @@ public class PlayerStateMachine : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy")){   //si el tag del objeto es Enemy
             Vida-=15;                               //Resta 15 puntos de vida
                 }
+            }
+    void OnTriggerEnter2D(Collider2D other){
+
         if(other.gameObject.CompareTag("HP")){      //si el tag del objeto es HP
             Vida+=25;   	                        //Suma 25 de vida 
             other.gameObject.SetActive(false);      //desactiva el objeto con el tag HP
         }
-            }
+    }
+
         }
     

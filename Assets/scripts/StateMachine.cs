@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class StateMachine : MonoBehaviour
@@ -45,6 +46,11 @@ public class StateMachine : MonoBehaviour
             case EnemyStateMachine.Morir: 
                 Morir();
                 break;
+        }
+        if(vida<=50){   //Si la vida es menor a 50, le cambiamos el color.
+            GetComponent<Renderer>().material.color = Color.yellow;
+        }else{
+            GetComponent<Renderer>().material.color = Color.white;
         }
     }
 
