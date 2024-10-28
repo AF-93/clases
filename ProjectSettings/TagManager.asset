@@ -8,6 +8,9 @@ TagManager:
   - Wall
   - Enemy
   - HP
+  - Zone A
+  - Zone B
+  - Cam B
   layers:
   - Default
   - TransparentFX
